@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6609C19F43D123FF091FD690 /* Pods_PolkopApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 586075BE2DDEFEF6C918E07A /* Pods_PolkopApp.framework */; };
+		9A118F3A1F5C793500CDB3DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F391F5C793500CDB3DE /* AppDelegate.swift */; };
+		9A118F3C1F5C793500CDB3DE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F3B1F5C793500CDB3DE /* BaseViewController.swift */; };
+		9A118F411F5C793500CDB3DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A118F401F5C793500CDB3DE /* Assets.xcassets */; };
+		9A118F441F5C793500CDB3DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A118F421F5C793500CDB3DE /* LaunchScreen.storyboard */; };
+		9A118F541F5C7E8800CDB3DE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F4E1F5C7E8800CDB3DE /* Extensions.swift */; };
+		9A118F551F5C7E8800CDB3DE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F4F1F5C7E8800CDB3DE /* Constants.swift */; };
+		9A118F561F5C7E8800CDB3DE /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F501F5C7E8800CDB3DE /* ErrorHandler.swift */; };
+		9A118F571F5C7E8800CDB3DE /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F511F5C7E8800CDB3DE /* Configuration.swift */; };
+		9A118F581F5C7E8800CDB3DE /* Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F521F5C7E8800CDB3DE /* Initializers.swift */; };
+		9A118F591F5C7E8800CDB3DE /* FlowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F531F5C7E8800CDB3DE /* FlowManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		53E2EB86BDFAF5A1D5B2991C /* Pods-PolkopApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolkopApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PolkopApp/Pods-PolkopApp.debug.xcconfig"; sourceTree = "<group>"; };
+		586075BE2DDEFEF6C918E07A /* Pods_PolkopApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PolkopApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7825E921803A3C2A11A905F0 /* Pods-PolkopApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolkopApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolkopApp/Pods-PolkopApp.release.xcconfig"; sourceTree = "<group>"; };
+		9A118F361F5C793500CDB3DE /* PolkopApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolkopApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A118F391F5C793500CDB3DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9A118F3B1F5C793500CDB3DE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9A118F401F5C793500CDB3DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A118F431F5C793500CDB3DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9A118F451F5C793500CDB3DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A118F4E1F5C7E8800CDB3DE /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9A118F4F1F5C7E8800CDB3DE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9A118F501F5C7E8800CDB3DE /* ErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		9A118F511F5C7E8800CDB3DE /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		9A118F521F5C7E8800CDB3DE /* Initializers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Initializers.swift; sourceTree = "<group>"; };
+		9A118F531F5C7E8800CDB3DE /* FlowManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A118F331F5C793500CDB3DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6609C19F43D123FF091FD690 /* Pods_PolkopApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D07445E902789913A1CAEBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				586075BE2DDEFEF6C918E07A /* Pods_PolkopApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A118F2D1F5C793500CDB3DE = {
+			isa = PBXGroup;
+			children = (
+				9A118F381F5C793500CDB3DE /* PolkopApp */,
+				9A118F371F5C793500CDB3DE /* Products */,
+				C559EA966BC80ED4E0C70182 /* Pods */,
+				2D07445E902789913A1CAEBF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9A118F371F5C793500CDB3DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A118F361F5C793500CDB3DE /* PolkopApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A118F381F5C793500CDB3DE /* PolkopApp */ = {
+			isa = PBXGroup;
+			children = (
+				9A118F4D1F5C7BB400CDB3DE /* Config */,
+				9A118F4C1F5C7B9300CDB3DE /* Resources */,
+				9A118F4B1F5C7B3A00CDB3DE /* Base classes */,
+			);
+			path = PolkopApp;
+			sourceTree = "<group>";
+		};
+		9A118F4B1F5C7B3A00CDB3DE /* Base classes */ = {
+			isa = PBXGroup;
+			children = (
+				9A118F3B1F5C793500CDB3DE /* BaseViewController.swift */,
+			);
+			name = "Base classes";
+			sourceTree = "<group>";
+		};
+		9A118F4C1F5C7B9300CDB3DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9A118F421F5C793500CDB3DE /* LaunchScreen.storyboard */,
+				9A118F401F5C793500CDB3DE /* Assets.xcassets */,
+				9A118F451F5C793500CDB3DE /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9A118F4D1F5C7BB400CDB3DE /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				9A118F391F5C793500CDB3DE /* AppDelegate.swift */,
+				9A118F4E1F5C7E8800CDB3DE /* Extensions.swift */,
+				9A118F4F1F5C7E8800CDB3DE /* Constants.swift */,
+				9A118F501F5C7E8800CDB3DE /* ErrorHandler.swift */,
+				9A118F511F5C7E8800CDB3DE /* Configuration.swift */,
+				9A118F521F5C7E8800CDB3DE /* Initializers.swift */,
+				9A118F531F5C7E8800CDB3DE /* FlowManager.swift */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		C559EA966BC80ED4E0C70182 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53E2EB86BDFAF5A1D5B2991C /* Pods-PolkopApp.debug.xcconfig */,
+				7825E921803A3C2A11A905F0 /* Pods-PolkopApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9A118F351F5C793500CDB3DE /* PolkopApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A118F481F5C793500CDB3DE /* Build configuration list for PBXNativeTarget "PolkopApp" */;
+			buildPhases = (
+				FF3D4B8958B0E9C4D006B58F /* [CP] Check Pods Manifest.lock */,
+				9A118F321F5C793500CDB3DE /* Sources */,
+				9A118F331F5C793500CDB3DE /* Frameworks */,
+				9A118F341F5C793500CDB3DE /* Resources */,
+				79B2925137F089C6A05C7279 /* [CP] Embed Pods Frameworks */,
+				CB4A311A9AA7EC91D9418963 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PolkopApp;
+			productName = PolkopApp;
+			productReference = 9A118F361F5C793500CDB3DE /* PolkopApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9A118F2E1F5C793500CDB3DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Marcel Mierzejewski";
+				TargetAttributes = {
+					9A118F351F5C793500CDB3DE = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9A118F311F5C793500CDB3DE /* Build configuration list for PBXProject "PolkopApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9A118F2D1F5C793500CDB3DE;
+			productRefGroup = 9A118F371F5C793500CDB3DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A118F351F5C793500CDB3DE /* PolkopApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9A118F341F5C793500CDB3DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A118F441F5C793500CDB3DE /* LaunchScreen.storyboard in Resources */,
+				9A118F411F5C793500CDB3DE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		79B2925137F089C6A05C7279 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PolkopApp/Pods-PolkopApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ActiveLabel/ActiveLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/JVFloatLabeledTextField/JVFloatLabeledTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/KVNProgress/KVNProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/MMDrawerController/MMDrawerController.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActiveLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVFloatLabeledTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVNProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMDrawerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PolkopApp/Pods-PolkopApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB4A311A9AA7EC91D9418963 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PolkopApp/Pods-PolkopApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF3D4B8958B0E9C4D006B58F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PolkopApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A118F321F5C793500CDB3DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A118F571F5C7E8800CDB3DE /* Configuration.swift in Sources */,
+				9A118F3C1F5C793500CDB3DE /* BaseViewController.swift in Sources */,
+				9A118F581F5C7E8800CDB3DE /* Initializers.swift in Sources */,
+				9A118F541F5C7E8800CDB3DE /* Extensions.swift in Sources */,
+				9A118F561F5C7E8800CDB3DE /* ErrorHandler.swift in Sources */,
+				9A118F3A1F5C793500CDB3DE /* AppDelegate.swift in Sources */,
+				9A118F551F5C7E8800CDB3DE /* Constants.swift in Sources */,
+				9A118F591F5C7E8800CDB3DE /* FlowManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9A118F421F5C793500CDB3DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A118F431F5C793500CDB3DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9A118F461F5C793500CDB3DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9A118F471F5C793500CDB3DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9A118F491F5C793500CDB3DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53E2EB86BDFAF5A1D5B2991C /* Pods-PolkopApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PolkopApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mmsoftware.PolkopApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9A118F4A1F5C793500CDB3DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7825E921803A3C2A11A905F0 /* Pods-PolkopApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PolkopApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mmsoftware.PolkopApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9A118F311F5C793500CDB3DE /* Build configuration list for PBXProject "PolkopApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A118F461F5C793500CDB3DE /* Debug */,
+				9A118F471F5C793500CDB3DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A118F481F5C793500CDB3DE /* Build configuration list for PBXNativeTarget "PolkopApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A118F491F5C793500CDB3DE /* Debug */,
+				9A118F4A1F5C793500CDB3DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9A118F2E1F5C793500CDB3DE /* Project object */;
+}

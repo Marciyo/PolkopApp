@@ -1,0 +1,13 @@
+Pods/*
+
+*.xcuserstate
+
+*.xcscheme
+
+*.xcbkptlist
+
+PolkopApp App.app.dSYM.zip
+
+PolkopApp App.ipa
+
+fastlane/report.xml
