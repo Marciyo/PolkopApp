@@ -18,6 +18,17 @@
 		9A118F571F5C7E8800CDB3DE /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F511F5C7E8800CDB3DE /* Configuration.swift */; };
 		9A118F581F5C7E8800CDB3DE /* Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F521F5C7E8800CDB3DE /* Initializers.swift */; };
 		9A118F591F5C7E8800CDB3DE /* FlowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F531F5C7E8800CDB3DE /* FlowManager.swift */; };
+		9A118F5B1F5C9FF000CDB3DE /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F5A1F5C9FF000CDB3DE /* Network.swift */; };
+		9A118F5E1F5CA37700CDB3DE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F5D1F5CA37700CDB3DE /* UserModel.swift */; };
+		9A118F601F5CA38400CDB3DE /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F5F1F5CA38400CDB3DE /* ProductModel.swift */; };
+		9A118F651F5CA58500CDB3DE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F621F5CA58500CDB3DE /* LoginViewController.swift */; };
+		9A118F661F5CA58500CDB3DE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F631F5CA58500CDB3DE /* RegisterViewController.swift */; };
+		9A118F671F5CA58500CDB3DE /* ReceivePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F641F5CA58500CDB3DE /* ReceivePasswordViewController.swift */; };
+		9A118F691F5CA5C600CDB3DE /* LoginBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F681F5CA5C600CDB3DE /* LoginBaseViewController.swift */; };
+		9A118F6B1F5CA76900CDB3DE /* ExtendedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F6A1F5CA76900CDB3DE /* ExtendedTextField.swift */; };
+		9A118F6D1F5CA77600CDB3DE /* GRSwipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F6C1F5CA77600CDB3DE /* GRSwipeTableViewCell.swift */; };
+		9A118F6F1F5CA79700CDB3DE /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F6E1F5CA79700CDB3DE /* BaseTableViewCell.swift */; };
+		9A118F711F5CACB400CDB3DE /* ExtendedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A118F701F5CACB400CDB3DE /* ExtendedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +47,17 @@
 		9A118F511F5C7E8800CDB3DE /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		9A118F521F5C7E8800CDB3DE /* Initializers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Initializers.swift; sourceTree = "<group>"; };
 		9A118F531F5C7E8800CDB3DE /* FlowManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowManager.swift; sourceTree = "<group>"; };
+		9A118F5A1F5C9FF000CDB3DE /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		9A118F5D1F5CA37700CDB3DE /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		9A118F5F1F5CA38400CDB3DE /* ProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		9A118F621F5CA58500CDB3DE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9A118F631F5CA58500CDB3DE /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9A118F641F5CA58500CDB3DE /* ReceivePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceivePasswordViewController.swift; sourceTree = "<group>"; };
+		9A118F681F5CA5C600CDB3DE /* LoginBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginBaseViewController.swift; sourceTree = "<group>"; };
+		9A118F6A1F5CA76900CDB3DE /* ExtendedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedTextField.swift; sourceTree = "<group>"; };
+		9A118F6C1F5CA77600CDB3DE /* GRSwipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GRSwipeTableViewCell.swift; sourceTree = "<group>"; };
+		9A118F6E1F5CA79700CDB3DE /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		9A118F701F5CACB400CDB3DE /* ExtendedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +101,8 @@
 		9A118F381F5C793500CDB3DE /* PolkopApp */ = {
 			isa = PBXGroup;
 			children = (
+				9A118F611F5CA57900CDB3DE /* ViewControllers */,
+				9A118F5C1F5CA36300CDB3DE /* Models */,
 				9A118F4D1F5C7BB400CDB3DE /* Config */,
 				9A118F4C1F5C7B9300CDB3DE /* Resources */,
 				9A118F4B1F5C7B3A00CDB3DE /* Base classes */,
@@ -89,7 +113,11 @@
 		9A118F4B1F5C7B3A00CDB3DE /* Base classes */ = {
 			isa = PBXGroup;
 			children = (
+				9A118F701F5CACB400CDB3DE /* ExtendedButton.swift */,
+				9A118F6E1F5CA79700CDB3DE /* BaseTableViewCell.swift */,
+				9A118F6A1F5CA76900CDB3DE /* ExtendedTextField.swift */,
 				9A118F3B1F5C793500CDB3DE /* BaseViewController.swift */,
+				9A118F6C1F5CA77600CDB3DE /* GRSwipeTableViewCell.swift */,
 			);
 			name = "Base classes";
 			sourceTree = "<group>";
@@ -114,8 +142,29 @@
 				9A118F511F5C7E8800CDB3DE /* Configuration.swift */,
 				9A118F521F5C7E8800CDB3DE /* Initializers.swift */,
 				9A118F531F5C7E8800CDB3DE /* FlowManager.swift */,
+				9A118F5A1F5C9FF000CDB3DE /* Network.swift */,
 			);
 			name = Config;
+			sourceTree = "<group>";
+		};
+		9A118F5C1F5CA36300CDB3DE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9A118F5D1F5CA37700CDB3DE /* UserModel.swift */,
+				9A118F5F1F5CA38400CDB3DE /* ProductModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9A118F611F5CA57900CDB3DE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9A118F681F5CA5C600CDB3DE /* LoginBaseViewController.swift */,
+				9A118F621F5CA58500CDB3DE /* LoginViewController.swift */,
+				9A118F631F5CA58500CDB3DE /* RegisterViewController.swift */,
+				9A118F641F5CA58500CDB3DE /* ReceivePasswordViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		C559EA966BC80ED4E0C70182 /* Pods */ = {
@@ -279,13 +328,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A118F651F5CA58500CDB3DE /* LoginViewController.swift in Sources */,
 				9A118F571F5C7E8800CDB3DE /* Configuration.swift in Sources */,
 				9A118F3C1F5C793500CDB3DE /* BaseViewController.swift in Sources */,
+				9A118F671F5CA58500CDB3DE /* ReceivePasswordViewController.swift in Sources */,
+				9A118F6F1F5CA79700CDB3DE /* BaseTableViewCell.swift in Sources */,
 				9A118F581F5C7E8800CDB3DE /* Initializers.swift in Sources */,
 				9A118F541F5C7E8800CDB3DE /* Extensions.swift in Sources */,
 				9A118F561F5C7E8800CDB3DE /* ErrorHandler.swift in Sources */,
+				9A118F691F5CA5C600CDB3DE /* LoginBaseViewController.swift in Sources */,
+				9A118F5B1F5C9FF000CDB3DE /* Network.swift in Sources */,
+				9A118F6D1F5CA77600CDB3DE /* GRSwipeTableViewCell.swift in Sources */,
 				9A118F3A1F5C793500CDB3DE /* AppDelegate.swift in Sources */,
+				9A118F601F5CA38400CDB3DE /* ProductModel.swift in Sources */,
+				9A118F711F5CACB400CDB3DE /* ExtendedButton.swift in Sources */,
 				9A118F551F5C7E8800CDB3DE /* Constants.swift in Sources */,
+				9A118F6B1F5CA76900CDB3DE /* ExtendedTextField.swift in Sources */,
+				9A118F661F5CA58500CDB3DE /* RegisterViewController.swift in Sources */,
+				9A118F5E1F5CA37700CDB3DE /* UserModel.swift in Sources */,
 				9A118F591F5C7E8800CDB3DE /* FlowManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +504,7 @@
 				9A118F4A1F5C793500CDB3DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -24,7 +24,7 @@ class FlowManager {
     static func loadLogin(){
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
             else {
-                fatalError()
+                fatalError("No shared app delegate found")
         }
         
         let navigationController = UINavigationController.init(rootViewController: LoginViewController())

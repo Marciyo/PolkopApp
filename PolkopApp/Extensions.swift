@@ -41,9 +41,9 @@ extension String {
         return boundingBox.height
     }
     
+    
     func stringToImage() -> UIImage?{
-        
-        return UIImage.init(data: (NSData.init(contentsOf: NSURL.init(string: self) as! URL) ?? NSData.init()) as Data)
+        return UIImage.init(data: (NSData.init(contentsOf: NSURL.init(string: self)! as URL) ?? NSData.init()) as Data)
     }
     
     func dateFromString(format: String) -> Date? {
