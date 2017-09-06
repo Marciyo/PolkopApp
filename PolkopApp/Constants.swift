@@ -30,11 +30,12 @@ struct Constants {
     
     struct Keys {
         static let KeychainBundle = Bundle.main.bundleIdentifier!
-        static let KeychainUserMailKey = "KeychainUserMailKey"
+        static let KeychainUserIdKey = "KeychainUserIdKey"
         static let KeychainAuthorizationKey = "KeychainAuthorizationKey"
         static let UserDataLoaded = "UserDataLoaded"
-        
+        static let NotificationRefresh = "NotificationRefresh"
     }
     
     static let kServerURL = BuildEnv == .Dev ? "http://outfits.mobi/api/v1/user/" : "https://api.server.com"
+    static let kTermsURL = "http://www.wp.pl"
 }

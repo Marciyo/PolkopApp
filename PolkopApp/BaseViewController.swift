@@ -67,7 +67,7 @@ class BaseViewController: UIViewController {
         switch type {
         case .menu:
             self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(
-                image: #imageLiteral(resourceName: "Menu Icon"),
+                image: #imageLiteral(resourceName: "icons8-Menu-50"),
                 style: UIBarButtonItemStyle.plain,
                 target: self,
                 action: #selector(self.menuButtonAction)
@@ -76,7 +76,7 @@ class BaseViewController: UIViewController {
             
         case .back:
             self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(
-                image: #imageLiteral(resourceName: "arrow_back_Icon"),
+                image: #imageLiteral(resourceName: "icons8-Delete-50"),
                 style: UIBarButtonItemStyle.plain,
                 target: self,
                 action: #selector(self.backButtonAction)

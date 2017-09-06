@@ -22,7 +22,7 @@ class RegisterViewController: LoginBaseViewController {
     
     let usernameField = ExtendedTextField.init(
         placeholder: "Nickname".localized,
-        pattern: Constants.Paterns.Nick,
+        pattern: Constants.Paterns.Name,
         keyboardType: UIKeyboardType.alphabet,
         autocorrectionType: UITextAutocorrectionType.no,
         autocapitalizationType: UITextAutocapitalizationType.words,

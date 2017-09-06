@@ -33,7 +33,7 @@ class LoginViewController: LoginBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let logoView = UIImageView.init(image: #imageLiteral(resourceName: "logoLogin"))
+        let logoView = UIImageView.init(image: #imageLiteral(resourceName: "Azerbaijan_Architecture_Construction_logo"))
         
         logoView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(logoView)
@@ -206,7 +206,7 @@ class LoginViewController: LoginBaseViewController {
         facebookButton.setTitleColor(UIColor.white, for: UIControlState.normal)
         facebookButton.titleLabel?.font = UIFont.button
         facebookButton.tag = 1
-        facebookButton.addTarget(self, action: #selector(self.socialButtonAction(sender:)), for: UIControlEvents.touchUpInside)
+//        facebookButton.addTarget(self, action: #selector(self.socialButtonAction(sender:)), for: UIControlEvents.touchUpInside)
         socialButtonsView.addSubview(facebookButton)
         
         socialButtonsView.addConstraints(
@@ -240,61 +240,6 @@ class LoginViewController: LoginBaseViewController {
                 ),
                 NSLayoutConstraint.init(
                     item: facebookButton,
-                    attribute: NSLayoutAttribute.bottom,
-                    relatedBy: NSLayoutRelation.equal,
-                    toItem: socialButtonsView,
-                    attribute: NSLayoutAttribute.bottom,
-                    multiplier: 1.0,
-                    constant: 0
-                ),
-            ]
-        )
-        
-        GIDSignIn.sharedInstance().uiDelegate = self
-        GIDSignIn.sharedInstance().delegate = self
-        
-        let googleButton = UIButton.init()
-        googleButton.backgroundColor = UIColor.googlePlus
-        googleButton.translatesAutoresizingMaskIntoConstraints = false
-        googleButton.setImage(#imageLiteral(resourceName: "Google Icon"), for: UIControlState.normal)
-        googleButton.setTitle("  \("Google+".localized)", for: UIControlState.normal)
-        googleButton.setTitleColor(UIColor.white, for: UIControlState.normal)
-        googleButton.titleLabel?.font = UIFont.button
-        googleButton.tag = 2
-        googleButton.addTarget(self, action: #selector(self.socialButtonAction(sender:)), for: UIControlEvents.touchUpInside)
-        socialButtonsView.addSubview(googleButton)
-        
-        socialButtonsView.addConstraints(
-            [
-                NSLayoutConstraint.init(
-                    item: googleButton,
-                    attribute: NSLayoutAttribute.right,
-                    relatedBy: NSLayoutRelation.equal,
-                    toItem: socialButtonsView,
-                    attribute: NSLayoutAttribute.right,
-                    multiplier: 1.0,
-                    constant: 0
-                ),
-                NSLayoutConstraint.init(
-                    item: googleButton,
-                    attribute: NSLayoutAttribute.left,
-                    relatedBy: NSLayoutRelation.equal,
-                    toItem: socialButtonsView,
-                    attribute: NSLayoutAttribute.centerX,
-                    multiplier: 1.0,
-                    constant: 0
-                ),
-                NSLayoutConstraint.init(
-                    item: googleButton,
-                    attribute: NSLayoutAttribute.top,
-                    relatedBy: NSLayoutRelation.equal,
-                    toItem: socialButtonsView,
-                    attribute: NSLayoutAttribute.top,
-                    multiplier: 1.0,
-                    constant: 0
-                ),
-                NSLayoutConstraint.init(
-                    item: googleButton,
                     attribute: NSLayoutAttribute.bottom,
                     relatedBy: NSLayoutRelation.equal,
                     toItem: socialButtonsView,

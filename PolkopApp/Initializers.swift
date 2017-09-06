@@ -26,7 +26,7 @@ class Initializers {
             }
         }
         self.initializeKVNProgress()
-        FirebaseApp.configure()
+//        FirebaseApp.configure()
         IQKeyboardManager.shared().isEnabled = true
     }
     

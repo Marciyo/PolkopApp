@@ -16,7 +16,7 @@ class LoginBaseViewController: BaseViewController {
     }
     
     func configureLayout(){
-        let background = UIImageView.init(image: #imageLiteral(resourceName: "Backrgound"))
+        let background = UIImageView.init(image: #imageLiteral(resourceName: "wallhaven-397758"))
         background.translatesAutoresizingMaskIntoConstraints = false
         background.contentMode = .scaleAspectFill
         self.view.addSubview(background)
