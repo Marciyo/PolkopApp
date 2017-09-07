@@ -32,7 +32,8 @@ class ExtendedButton: UIButton {
         
         self.addTarget(self, action: #selector(self.onClickFunction), for: UIControlEvents.touchUpInside)
         
-        let arrowView = UIImageView.init(image: #imageLiteral(resourceName: "iconbuttonarrow"))
+        let arrowView = UIImageView.init(image: #imageLiteral(resourceName: "arrow-icon-28"))
+        arrowView.contentMode = .scaleAspectFit
         arrowView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(arrowView)
         
@@ -46,7 +47,16 @@ class ExtendedButton: UIButton {
                     toItem: self.titleLabel,
                     attribute: NSLayoutAttribute.right,
                     multiplier: 1.0,
-                    constant: 6
+                    constant: 4
+                ),
+                NSLayoutConstraint.init(
+                    item: arrowView,
+                    attribute: NSLayoutAttribute.width,
+                    relatedBy: NSLayoutRelation.equal,
+                    toItem: nil,
+                    attribute: NSLayoutAttribute.width,
+                    multiplier: 1.0,
+                    constant: 16
                 ),
                 NSLayoutConstraint.init(
                     item: arrowView,

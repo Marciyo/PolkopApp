@@ -12,6 +12,7 @@ import UserNotifications
 import IQKeyboardManager
 import Firebase
 import KVNProgress
+import GoogleMaps
 
 class Initializers {
     
@@ -26,6 +27,8 @@ class Initializers {
             }
         }
         self.initializeKVNProgress()
+        GMSServices.provideAPIKey("AIzaSyAbIkBiUioZ_u7AZBDfeYE0IF2n7dUWKlg")
+    
 //        FirebaseApp.configure()
         IQKeyboardManager.shared().isEnabled = true
     }

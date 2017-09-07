@@ -18,6 +18,9 @@ def import_common_pods
   pod 'Firebase/Messaging'
   pod 'JVFloatLabeledTextField'
   pod 'ActiveLabel'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  pod 'SnapKit'
 end
 
 target 'PolkopApp' do

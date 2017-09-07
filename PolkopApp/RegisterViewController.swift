@@ -52,7 +52,7 @@ class RegisterViewController: LoginBaseViewController {
         
         let backButton = UIButton.init()
         backButton.translatesAutoresizingMaskIntoConstraints = false
-        backButton.setImage(#imageLiteral(resourceName: "xicon"), for: UIControlState.normal)
+        backButton.setImage(#imageLiteral(resourceName: "icons8-Delete-50"), for: UIControlState.normal)
         backButton.imageView?.contentMode = .center
         backButton.addTarget(self, action: #selector(self.backButtonAction(sender:)), for: UIControlEvents.touchUpInside)
         self.view.addSubview(backButton)

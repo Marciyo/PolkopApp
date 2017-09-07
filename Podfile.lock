@@ -28,6 +28,13 @@ PODS:
     - FirebaseInstanceID (~> 2.0)
     - GoogleToolboxForMac/Logger (~> 2.1)
     - Protobuf (~> 3.1)
+  - GoogleMaps (2.4.0):
+    - GoogleMaps/Maps (= 2.4.0)
+  - GoogleMaps/Base (2.4.0)
+  - GoogleMaps/Maps (2.4.0):
+    - GoogleMaps/Base
+  - GooglePlaces (2.4.0):
+    - GoogleMaps/Base (= 2.4.0)
   - GoogleToolboxForMac/Defines (2.1.1)
   - GoogleToolboxForMac/Logger (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
@@ -59,6 +66,7 @@ PODS:
   - SDWebImage (4.1.0):
     - SDWebImage/Core (= 4.1.0)
   - SDWebImage/Core (4.1.0)
+  - SnapKit (3.2.0)
 
 DEPENDENCIES:
   - ActiveLabel
@@ -66,6 +74,8 @@ DEPENDENCIES:
   - AlamofireObjectMapper (~> 4.0)
   - Firebase
   - Firebase/Messaging
+  - GoogleMaps
+  - GooglePlaces
   - IQKeyboardManager
   - JVFloatLabeledTextField
   - KeychainAccess
@@ -73,6 +83,7 @@ DEPENDENCIES:
   - MMDrawerController
   - ObjectMapper
   - SDWebImage
+  - SnapKit
 
 SPEC CHECKSUMS:
   ActiveLabel: 68625f22775f51c31bb691ca8de20f1e5a3bc825
@@ -83,6 +94,8 @@ SPEC CHECKSUMS:
   FirebaseCore: 28def3c643989c97ea5a69ea5000f5fa9902b9fd
   FirebaseInstanceID: c4c7fca62c7b7330caee5da04f19a37ea37bb1c1
   FirebaseMessaging: 85af6c27188538b3a6f7dfd0b3b0596358cb0c39
+  GoogleMaps: 8436ab5d1c25e36915b2f7416d0c8e3fa2e76c61
+  GooglePlaces: aafe5990fa7951e98e078761bbdaaf236d7e0c65
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   IQKeyboardManager: 8eab4d8111418414619d1df8e4779ce5d0f8d7e2
   JVFloatLabeledTextField: 96c0c1b6739001801340d25b86aff990d67c4181
@@ -93,7 +106,8 @@ SPEC CHECKSUMS:
   ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
   Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
   SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: 94b39d6356f3d0ac347161d5c9922dd308d81f53
+PODFILE CHECKSUM: 0fff850652cdc1c228ddd0054eb9de176d804478
 
 COCOAPODS: 1.1.1

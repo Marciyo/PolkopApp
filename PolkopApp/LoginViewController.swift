@@ -61,6 +61,7 @@ class LoginViewController: LoginBaseViewController {
         )
         
         self.emailField.setNextResponder(nextField: self.passwordField.textField)
+        self.emailField.textField.textColor = UIColor.white
         self.view.addSubview(self.emailField)
         self.view.addConstraints(
             [
@@ -88,6 +89,7 @@ class LoginViewController: LoginBaseViewController {
         self.passwordField.onEndFunction = {
             self.login()
         }
+        self.passwordField.textField.textColor = UIColor.white
         self.view.addSubview(self.passwordField)
         self.view.addConstraints(
             [
@@ -201,8 +203,8 @@ class LoginViewController: LoginBaseViewController {
         let facebookButton = UIButton.init()
         facebookButton.backgroundColor = UIColor.facebook
         facebookButton.translatesAutoresizingMaskIntoConstraints = false
-        facebookButton.setImage(#imageLiteral(resourceName: "Facebook Icon"), for: UIControlState.normal)
-        facebookButton.setTitle("  \("Facebook".localized)", for: UIControlState.normal)
+//        facebookButton.setImage(#imageLiteral(resourceName: "facebook-icon-preview-1-400x400"), for: UIControlState.normal)
+        facebookButton.setTitle("  \("Log in with Facebook".localized)", for: UIControlState.normal)
         facebookButton.setTitleColor(UIColor.white, for: UIControlState.normal)
         facebookButton.titleLabel?.font = UIFont.button
         facebookButton.tag = 1
@@ -225,7 +227,7 @@ class LoginViewController: LoginBaseViewController {
                     attribute: NSLayoutAttribute.right,
                     relatedBy: NSLayoutRelation.equal,
                     toItem: socialButtonsView,
-                    attribute: NSLayoutAttribute.centerX,
+                    attribute: NSLayoutAttribute.right,
                     multiplier: 1.0,
                     constant: 0
                 ),
@@ -362,6 +364,10 @@ class LoginViewController: LoginBaseViewController {
     }
     
     func login(){
+        //for NOW - TO BE CHANGED
+        FlowManager.loadMain()
+        return
+        
         var valid = true
         if !self.emailField.isValid(emptyAllowed: false){
             self.emailField.setAs(valid: false)

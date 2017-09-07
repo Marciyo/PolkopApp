@@ -102,7 +102,7 @@ class ExtendedTextField: UIView, UITextFieldDelegate{
         )
         
         self.separator.translatesAutoresizingMaskIntoConstraints = false
-        self.separator.backgroundColor = UIColor.white
+        self.separator.backgroundColor = UIColor.lightGray
         
         self.addSubview(self.separator)
         
