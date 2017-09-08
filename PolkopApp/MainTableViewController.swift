@@ -72,7 +72,7 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
                     toItem: nil,
                     attribute: NSLayoutAttribute.height,
                     multiplier: 1.0,
-                    constant: 150
+                    constant: 180
                 )
             ]
         )
@@ -172,7 +172,7 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
         )
         
         self.descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.descriptionLabel.font = UIFont.normalBold
+        self.descriptionLabel.font = UIFont.normal
         self.descriptionLabel.textAlignment = .center
         self.descriptionLabel.numberOfLines = 0
         self.descriptionLabel.lineBreakMode = .byWordWrapping
@@ -213,11 +213,13 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
         self.descriptionLabel.text = "Welcome to PolkopApp. \n In the search bar below, enter the name of the product you wanna borrow."
         
         self.searchBar.translatesAutoresizingMaskIntoConstraints = false
+        self.searchBar.backgroundColor = UIColor.clear
+        self.searchBar.barTintColor = UIColor.white
         self.view.addSubview(self.searchBar)
         self.searchBar.snp.makeConstraints { (item) in
-            item.left.equalTo(self.descriptionLabel.snp.left).offset(0)
+            item.left.equalToSuperview().offset(16)
             item.right.equalTo(self.descriptionLabel.snp.right).offset(0)
-            item.bottom.equalTo(self.realBackground.snp.top).offset(-10)
+            item.top.equalTo(self.descriptionLabel.snp.bottom).offset(6)
         }
         
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -294,6 +296,11 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
         
         cell.itemImage.image = #imageLiteral(resourceName: "DuraStar_LocalDelivery_M_2x_750x520")
         cell.itemLabel.text = "Trunk number \(indexPath.item) to rent"
+        cell.descriptionLabel.text = "Poznań, Rataje, 📍2.4km"
+        
+        if indexPath.item > 3{
+            cell.premiumImage.removeFromSuperview()
+        }
         
         return cell
     }

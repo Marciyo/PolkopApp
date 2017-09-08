@@ -11,6 +11,7 @@ import UIKit
 class DrawerMenuTableViewCell: UITableViewCell {
     
     let itemImage = UIImageView.init()
+    
     let itemLabel = UILabel.init()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {

@@ -10,7 +10,7 @@ import UIKit
 import KVNProgress
 
 
-class ProfileViewController: LoginBaseViewController {
+class ProfileViewController: UIViewController {
     
     let emailField = ExtendedTextField.init(
         placeholder: "E-mail".localized,
@@ -48,14 +48,19 @@ class ProfileViewController: LoginBaseViewController {
         isSecure: true
     )
     
+    let tableView = UITableView.init()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        self.navigationItem.title = "Edit profile".localized
         
         let backButton = UIButton.init()
         backButton.translatesAutoresizingMaskIntoConstraints = false
         backButton.setImage(#imageLiteral(resourceName: "icons8-Delete-50"), for: UIControlState.normal)
         backButton.imageView?.contentMode = .center
-        backButton.addTarget(self, action: #selector(self.backButtonAction(sender:)), for: UIControlEvents.touchUpInside)
         self.view.addSubview(backButton)
         
         self.view.addConstraints(
@@ -96,58 +101,9 @@ class ProfileViewController: LoginBaseViewController {
                     multiplier: 1.0,
                     constant: 0
                 ),
-                ]
+            ]
         )
-        
-        let titleLabel = UILabel.init()
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.text = "Register".localized
-        titleLabel.font = UIFont.title
-        titleLabel.textColor = UIColor.white
-        titleLabel.textAlignment = .center
-        self.view.addSubview(titleLabel)
-        
-        self.view.addConstraints(
-            [
-                NSLayoutConstraint.init(
-                    item: titleLabel,
-                    attribute: NSLayoutAttribute.centerX,
-                    relatedBy: NSLayoutRelation.equal,
-                    toItem: self.view,
-                    attribute: NSLayoutAttribute.centerX,
-                    multiplier: 1.0,
-                    constant: 0
-                ),
-                NSLayoutConstraint.init(
-                    item: titleLabel,
-                    attribute: NSLayoutAttribute.top,
-                    relatedBy: NSLayoutRelation.greaterThanOrEqual,
-                    toItem: self.view,
-                    attribute: NSLayoutAttribute.top,
-                    multiplier: 1.0,
-                    constant: 50
-                ),
-                NSLayoutConstraint.init(
-                    item: titleLabel,
-                    attribute: NSLayoutAttribute.top,
-                    relatedBy: NSLayoutRelation.lessThanOrEqual,
-                    toItem: self.view,
-                    attribute: NSLayoutAttribute.top,
-                    multiplier: 1.0,
-                    constant: 76
-                ),
-                NSLayoutConstraint.init(
-                    item: titleLabel,
-                    attribute: NSLayoutAttribute.width,
-                    relatedBy: NSLayoutRelation.equal,
-                    toItem: self.view,
-                    attribute: NSLayoutAttribute.width,
-                    multiplier: 0.8,
-                    constant: 0
-                ),
-                ]
-        )
-        
+
         self.emailField.setNextResponder(nextField: self.usernameField.textField)
         self.view.addSubview(self.emailField)
         self.view.addConstraints(
@@ -155,11 +111,11 @@ class ProfileViewController: LoginBaseViewController {
                 NSLayoutConstraint.init(
                     item: self.emailField,
                     attribute: NSLayoutAttribute.top,
-                    relatedBy: NSLayoutRelation.greaterThanOrEqual,
-                    toItem: titleLabel,
-                    attribute: NSLayoutAttribute.bottom,
+                    relatedBy: NSLayoutRelation.equal,
+                    toItem: self.view,
+                    attribute: NSLayoutAttribute.top,
                     multiplier: 1.0,
-                    constant: 30
+                    constant: 100
                 ),
                 NSLayoutConstraint.init(
                     item: self.emailField,
@@ -170,7 +126,7 @@ class ProfileViewController: LoginBaseViewController {
                     multiplier: 1.0,
                     constant: 0
                 ),
-                ]
+            ]MARCEl JEST SLABY W FIFE I LUBI CHLOPCOW
         )
         
         self.usernameField.setNextResponder(nextField: self.passwordField.textField)
@@ -199,11 +155,7 @@ class ProfileViewController: LoginBaseViewController {
         )
         
         self.passwordField.setNextResponder(nextField: self.confirmPasswordField.textField)
-        self.passwordField.onEndFunction = {[weak self] in
-            if self?.confirmPasswordField.textField.text != "" {
-                _ = self?.confirmPasswordValid()
-            }
-        }
+
         self.view.addSubview(self.passwordField)
         self.view.addConstraints(
             [
@@ -227,15 +179,7 @@ class ProfileViewController: LoginBaseViewController {
                 ),
                 ]
         )
-        
-        self.confirmPasswordField.onEndFunction = {
-            self.register()
-        }
-        
-        self.confirmPasswordField.onChangeFunction = { [weak self] in
-            _ = self?.confirmPasswordValid()
-        }
-        
+
         self.view.addSubview(self.confirmPasswordField)
         self.view.addConstraints(
             [
@@ -256,160 +200,90 @@ class ProfileViewController: LoginBaseViewController {
                     attribute: NSLayoutAttribute.centerX,
                     multiplier: 1.0,
                     constant: 0
-                ),
-                ]
+                )
+            ]
         )
         
+        self.tableView.translatesAutoresizingMaskIntoConstraints = false
         
-        let registerButton = ExtendedButton.init(
-        title: "SET UP MY ACCOUNT".localized) {
-            self.register()
-        }
-        
-        self.view.addSubview(registerButton)
+        self.tableView.register(BasicTableViewCell.self, forCellReuseIdentifier: "basic")
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.view.addSubview(self.tableView)
         self.view.addConstraints(
             [
                 NSLayoutConstraint.init(
-                    item: registerButton,
+                    item: self.tableView,
                     attribute: NSLayoutAttribute.top,
                     relatedBy: NSLayoutRelation.equal,
-                    toItem: self.view,
-                    attribute: NSLayoutAttribute.bottom,
-                    multiplier: 1.0,
-                    constant: -140
-                ),
-                NSLayoutConstraint.init(
-                    item: registerButton,
-                    attribute: NSLayoutAttribute.centerX,
-                    relatedBy: NSLayoutRelation.equal,
-                    toItem: self.view,
-                    attribute: NSLayoutAttribute.centerX,
-                    multiplier: 1.0,
-                    constant: 0
-                ),
-                NSLayoutConstraint.init(
-                    item: confirmPasswordField,
-                    attribute: NSLayoutAttribute.bottom,
-                    relatedBy: NSLayoutRelation.greaterThanOrEqual,
-                    toItem: registerButton,
-                    attribute: NSLayoutAttribute.top,
-                    multiplier: 1.0,
-                    constant: -160
-                ),
-                ]
-        )
-        
-        let attributtedString = NSMutableAttributedString.init(string: "\("By clicking register I agree to your".localized) ", attributes: [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont.normal])
-        attributtedString.append(NSAttributedString.init(string: "\("Terms".localized).", attributes: [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont.normal, NSUnderlineStyleAttributeName: 1]))
-        
-        let termsButton = UIButton.init()
-        termsButton.translatesAutoresizingMaskIntoConstraints = false
-        termsButton.setTitleColor(UIColor.white, for: UIControlState.normal)
-        termsButton.setAttributedTitle(attributtedString, for: UIControlState.normal)
-        termsButton.titleLabel?.font = UIFont.normal
-        termsButton.addTarget(self, action: #selector(self.termsButtonAction(sender:)), for: UIControlEvents.touchUpInside)
-        
-        self.view.addSubview(termsButton)
-        self.view.addConstraints(
-            [
-                NSLayoutConstraint.init(
-                    item: termsButton,
-                    attribute: NSLayoutAttribute.top,
-                    relatedBy: NSLayoutRelation.equal,
-                    toItem: registerButton,
+                    toItem: self.passwordField,
                     attribute: NSLayoutAttribute.bottom,
                     multiplier: 1.0,
                     constant: 8
                 ),
                 NSLayoutConstraint.init(
-                    item: termsButton,
-                    attribute: NSLayoutAttribute.left,
+                    item: self.tableView,
+                    attribute: NSLayoutAttribute.centerX,
                     relatedBy: NSLayoutRelation.equal,
-                    toItem: registerButton,
-                    attribute: NSLayoutAttribute.left,
+                    toItem: self.view,
+                    attribute: NSLayoutAttribute.centerX,
                     multiplier: 1.0,
                     constant: 0
                 ),
                 NSLayoutConstraint.init(
-                    item: termsButton,
-                    attribute: NSLayoutAttribute.right,
+                    item: self.tableView,
+                    attribute: NSLayoutAttribute.bottom,
                     relatedBy: NSLayoutRelation.equal,
-                    toItem: registerButton,
-                    attribute: NSLayoutAttribute.right,
+                    toItem: self.view,
+                    attribute: NSLayoutAttribute.bottom,
                     multiplier: 1.0,
                     constant: 0
                 ),
                 NSLayoutConstraint.init(
-                    item: termsButton,
-                    attribute: NSLayoutAttribute.height,
+                    item: self.tableView,
+                    attribute: NSLayoutAttribute.width,
                     relatedBy: NSLayoutRelation.equal,
-                    toItem: registerButton,
-                    attribute: NSLayoutAttribute.height,
+                    toItem: self.view,
+                    attribute: NSLayoutAttribute.width,
                     multiplier: 1.0,
                     constant: 0
-                ),
-                ]
+                )
+            ]
         )
-        
     }
-    
-    func confirmPasswordValid() -> Bool{
-        weak var _self = self
-        if self.confirmPasswordField.isValid(emptyAllowed: false) {
-            if let textConfirmPassword = _self?.confirmPasswordField.textField.text,
-                let textPassword = _self?.passwordField.textField.text {
-                _self?.confirmPasswordField.setAs(valid: textConfirmPassword == textPassword)
-                return textConfirmPassword == textPassword
-            }
-        }
-        return false
-    }
-    
-    func backButtonAction(sender: UIButton){
-        _ = self.navigationController?.popViewController(animated: true)
-    }
-    
-    func register(){
-        var valid = true
-        if !self.emailField.isValid(emptyAllowed: false){
-            self.emailField.setAs(valid: false)
-            valid = false
-        }
-        if !self.usernameField.isValid(emptyAllowed: false){
-            self.usernameField.setAs(valid: false)
-            valid = false
-        }
-        if !self.passwordField.isValid(emptyAllowed: false){
-            self.passwordField.setAs(valid: false)
-            valid = false
-        }
-        if !self.confirmPasswordValid(){
-            valid = false
-        }
-        if !valid {
-            return
-        }
-        
-        KVNProgress.show()
-        Network.Register(email: self.emailField.textField.text ?? "", userName: self.usernameField.textField.text ?? "", password: self.passwordField.textField.text ?? "")
-            .responseModel(
-                successCompletion: { (model: UserModel) in
-                    FlowManager.currentUser = model
-                    KVNProgress.dismiss()
-                    FlowManager.loadMain()
-                    
-            }) { (errorMessage) in
-                errorMessage.log()
-                KVNProgress.showError(withStatus: errorMessage)
-        }
-    }
-    
-    func termsButtonAction(sender: UIButton){
-        if let url = URL.init(string: Constants.kTermsURL){
-            if UIApplication.shared.canOpenURL(url){
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            }
-        }
-    }
+
+
 }
 
+extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+        //        return self.data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "basic", for: indexPath) as! BasicTableViewCell
+        //        let model = self.data[indexPath.row]
+        
+        cell.itemImage.image = #imageLiteral(resourceName: "DuraStar_LocalDelivery_M_2x_750x520")
+        cell.itemLabel.text = "Trunk number \(indexPath.item) to rent"
+        cell.descriptionLabel.text = "Poznań, Rataje, 📍2.4km"
+        
+        if indexPath.item > 3{
+            cell.premiumImage.removeFromSuperview()
+        }
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+
+}

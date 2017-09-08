@@ -8,10 +8,13 @@
 
 import UIKit
 
-class BasicTableViewCell: UITableViewCell {
+class BasicTableViewCell: GRSwipeTableViewCell {
     
     let itemImage = UIImageView.init()
     let itemLabel = UILabel.init()
+    let descriptionLabel = UILabel.init()
+    let premiumImage = UIImageView.init()
+
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -20,7 +23,6 @@ class BasicTableViewCell: UITableViewCell {
         
         self.itemImage.translatesAutoresizingMaskIntoConstraints = false
         self.itemImage.backgroundColor = UIColor.lightGray
-        self.itemImage.contentMode = .scaleAspectFit
         self.itemImage.layer.cornerRadius = 35
         self.itemImage.contentMode = .scaleAspectFill
         self.itemImage.layer.masksToBounds = true
@@ -65,7 +67,7 @@ class BasicTableViewCell: UITableViewCell {
                     multiplier: 1.0,
                     constant: 70
                 ),
-                ]
+            ]
         )
         
         self.itemLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -82,7 +84,7 @@ class BasicTableViewCell: UITableViewCell {
                     toItem: self,
                     attribute: NSLayoutAttribute.centerY,
                     multiplier: 1.0,
-                    constant: 0
+                    constant: -8
                 ),
                 NSLayoutConstraint.init(
                     item: self.itemLabel,
@@ -95,8 +97,82 @@ class BasicTableViewCell: UITableViewCell {
                 )
             ]
         )
+        
+        
+        self.descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.descriptionLabel.font = UIFont.small
+        self.descriptionLabel.textAlignment = .left
+        self.descriptionLabel.adjustsFontSizeToFitWidth = true
+        self.addSubview(self.descriptionLabel)
+        self.addConstraints(
+            [
+                NSLayoutConstraint.init(
+                    item: self.descriptionLabel,
+                    attribute: NSLayoutAttribute.top,
+                    relatedBy: NSLayoutRelation.equal,
+                    toItem: self.itemLabel,
+                    attribute: NSLayoutAttribute.bottom,
+                    multiplier: 1.0,
+                    constant: 4
+                ),
+                NSLayoutConstraint.init(
+                    item: self.descriptionLabel,
+                    attribute: NSLayoutAttribute.left,
+                    relatedBy: NSLayoutRelation.equal,
+                    toItem: self.itemLabel,
+                    attribute: NSLayoutAttribute.left,
+                    multiplier: 1.0,
+                    constant: 0
+                )
+            ]
+        )
+
+        self.premiumImage.translatesAutoresizingMaskIntoConstraints = false
+        self.premiumImage.contentMode = .scaleAspectFill
+        self.premiumImage.image = #imageLiteral(resourceName: "Star_icon_stylized.svg")
+        self.addSubview(self.premiumImage)
+        self.addConstraints(
+            [
+                NSLayoutConstraint.init(
+                    item: self.premiumImage,
+                    attribute: NSLayoutAttribute.right,
+                    relatedBy: NSLayoutRelation.equal,
+                    toItem: self,
+                    attribute: NSLayoutAttribute.right,
+                    multiplier: 1.0,
+                    constant: -12
+                ),
+                NSLayoutConstraint.init(
+                    item: self.premiumImage,
+                    attribute: NSLayoutAttribute.centerY,
+                    relatedBy: NSLayoutRelation.equal,
+                    toItem: self,
+                    attribute: NSLayoutAttribute.centerY,
+                    multiplier: 1.0,
+                    constant: 0
+                ),
+                NSLayoutConstraint.init(
+                    item: self.premiumImage,
+                    attribute: NSLayoutAttribute.width,
+                    relatedBy: NSLayoutRelation.equal,
+                    toItem: nil,
+                    attribute: NSLayoutAttribute.width,
+                    multiplier: 1.0,
+                    constant: 20
+                ),
+                NSLayoutConstraint.init(
+                    item: self.premiumImage,
+                    attribute: NSLayoutAttribute.height,
+                    relatedBy: NSLayoutRelation.equal,
+                    toItem: self.premiumImage,
+                    attribute: NSLayoutAttribute.width,
+                    multiplier: 1.0,
+                    constant: 0
+                )
+            ]
+        )
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
