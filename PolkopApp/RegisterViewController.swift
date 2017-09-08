@@ -2,8 +2,8 @@
 //  RegisterViewController.swift
 //  Eracoin App
 //
-//  Created by Maciej Matuszewski on 12.02.2017.
-//  Copyright © 2017 Maciej Matuszewski. All rights reserved.
+//  Created by Marcel Mierzejewski on 08.02.2017.
+//  Copyright © 2017 Marcel Mierzejewski. All rights reserved.
 //
 
 import UIKit

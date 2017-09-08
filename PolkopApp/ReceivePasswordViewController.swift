@@ -2,8 +2,8 @@
 //  ReceivePasswordViewController.swift
 //  Eracoin App
 //
-//  Created by Piotr Maleszczuk on 15.02.2017.
-//  Copyright © 2017 Maciej Matuszewski. All rights reserved.
+//  Created by Marcel Mierzejewski on 08.02.2017.
+//  Copyright © 2017 Marcel Mierzejewski. All rights reserved.
 //
 
 import UIKit
